@@ -84,6 +84,13 @@
     // 7. sort Exercise
     // Sort the people alphabetically by last name
 
+    const PEOPLE = people.sort(function(lastOne, nextOne) {
+      const [aFirst, aLast] = lastOne.split(", ");
+      const [bFirst, bLast] = nextOne.split(", ");
+      return aLast > bLast ? 1 : -1;
+    });
+
+    console.log(PEOPLE);
 
 
     // 8. Reduce Exercise
